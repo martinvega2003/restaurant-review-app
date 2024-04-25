@@ -1,0 +1,31 @@
+STEPS: 
+
+1. Create server directory
+2. Move to server directory and run 'npm init -y' and 'npm i express' commands.
+3. Create server.js file
+4. Create the server, middlewares and CRUD routes (get, post, put, delete)
+5. Connect to PG Database:
+
+* npm i pg on server directory
+* Create db folder -> create index.js file there -> write lines to connect to PG database.
+
+ON DB/INDEX FILE:
+
+import pkg from "pg";
+const { Pool } = pkg
+
+const pool = new Pool({
+    user: "postgres",
+    host: "localhost",
+    database: "restaurant-review-app",
+    password: "12345",
+    port: 5432
+}) //Creamos una instancia de Pool() (sirve para conectarnos a la BD)
+
+5. Create Restaurant API (Using axios and exporting the baseurl)
+6. Create the methods for when you're trying to change the DB (use the baseurl, add what you need, use get, post, put or delete and store the response in a variable)
+   use async/await and usse the response to trigger the DB actions.
+
+7. Create a restaurant context using useContext and pass to every component the state (That will show the restaurants from the DB to the UI), the setState function,
+   And all the other methods you'll need to execute the app.
+
